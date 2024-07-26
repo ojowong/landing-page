@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href = "#header">Home</a></li>
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#services">Services</a></li>
+                <li><a href = "#portfolio">Portfolio</a></li>
+                <li><a href = "#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Johnny</span></h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus. Nulla facilisi. Quisque placerat, velit ac vestibulum auctor, mauris sapien ultrices tortor, vel consectetur arcu nisi at velit. Sed ut consectetur odio. Nulla facilisi.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick = "opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick = "opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "experience">
+                    <ul>
+                        <li><span>EXPERIENCE</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "education">
+                    <ul>
+                        <li><span>EDUCATION</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class = "services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class = "work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+        <a href ="#" class="btn">See more</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div id="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>contact@email.com</p>
+                <p>+123 456 7890</p>
+                <div class = "social-icons">
+                    <a href="#"><i class="images/facebook.png"></i></a>
+                    <a href="#"><i class="images/twitter.png"></i></a>
+                    <a href="#"><i class="images/instagram.png"></i></a>
+                    <a href="#"><i class="images/linkedin.png"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class = "btn btn2"> Download CV</a>
+            </div>
+            <div id="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" rows="6" placeholder="Message" required></textarea>
+                    <button type="submit" class = "btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Kevin. Made with Easy Tutorials</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+
+</script>
+
+</body>
+</html>
