@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7722bd5a5e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
             <img src="images/logo.png" class="logo">
-            <ul>
+            <ul id = "sidemenu">
                 <li><a href = "#header">Home</a></li>
                 <li><a href = "#about">About</a></li>
                 <li><a href = "#services">Services</a></li>
                 <li><a href = "#portfolio">Portfolio</a></li>
                 <li><a href = "#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick ="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Software Engineer</p>
@@ -35,7 +38,9 @@
             </div>
             <div class="about-col-2">
                 <h1 class = "sub-title">About Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus. Nulla facilisi. Quisque placerat, velit ac vestibulum auctor, mauris sapien ultrices tortor, vel consectetur arcu nisi at velit. Sed ut consectetur odio. Nulla facilisi.</p>
+                <p> Born and raised in New York, I am a Computer Science student at the University of Michigan with a strong passion for technology and problem-solving. As a dedicated full-stack developer, I have honed my skills in both front-end and back-end development, working with technologies like HTML, CSS, JavaScript, React, Python, Flask, REST, SQLite, and AWS.
+                    On my free time I love learning new skills and staying active, working out, and playing basketball.
+                </p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick = "opentab('skills')">Skills</p>
                     <p class="tab-links" onclick = "opentab('experience')">Experience</p>
@@ -43,23 +48,33 @@
                 </div>
                 <div class="tab-contents active-tab" id = "skills">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
                         <li><span>Web Development</span><br>Web app Development</li>
-                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id = "experience">
                     <ul>
-                        <li><span>EXPERIENCE</span><br>Designing Web/App Interfaces</li>
-                        <li><span>Web Development</span><br>Web app Development</li>
-                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Tatum Games</span>
+                            <div class="date">2021-2024</div>
+                            <div>Web developer</div></li>
+                        <li><span>RoboFun</span>
+                            <div class="date">2021-2024</div>
+                            <div>Coding and Mathematics Tutor</div></li>
+                        <li><span>ExamIQ</span>
+                            <div class="date">2021-2024</div>
+                            <div>Robotics and Coding Instructor</div></li>
                     </ul>
                 </div>
                 <div class="tab-contents" id = "education">
                     <ul>
-                        <li><span>EDUCATION</span><br>Designing Web/App Interfaces</li>
-                        <li><span>Web Development</span><br>Web app Development</li>
-                        <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                        <li><span>University of Michigan</span>
+                            <div class="date">2021-2024</div>
+                            <div>Bachelor's of Science in Computer Science</div>
+                            <div> Minor in Entrepreneurship</div>
+                        </li>
+                        <li><span>Stuyvesant High School</span>
+                            <div class = "date"> 2017-2021 </div>
+                            <div> High School Diploma</div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -72,16 +87,19 @@
         <h1 class="sub-title">My Services</h1>
         <div class = "services-list">
             <div>
+                <i class="fa-solid fa-code"></i>
                 <h2>Web Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
+                <i class="fa-solid fa-crop"></i>
                 <h2>UI/UX Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
+                <i class="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel justo at neque commodo maximus.</p>
                 <a href="#">Learn more</a>
@@ -94,51 +112,67 @@
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
-            <div class = "work">
+            <div class="work">
                 <img src="images/work-1.png">
                 <div class="layer">
                     <h3>Social Media App</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"></a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class = "work">
+            <div class="work">
                 <img src="images/work-2.png">
                 <div class="layer">
                     <h3>Music App</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"></a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class = "work">
+            <div class="work">
                 <img src="images/work-3.png">
                 <div class="layer">
                     <h3>Online App</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"></a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!-- Hidden portfolio items -->
+            <div class="work hidden">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>New App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work hidden">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Another App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href ="#" class="btn">See more</a>
+        <a href="#" class="btn" id="see-more-btn" data-showing-more="false">See More</a>
     </div>
 </div>
 
 <div id="contact">
     <div class="container">
         <div class="row">
-            <div id="contact-left">
+            <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p>contact@email.com</p>
-                <p>+123 456 7890</p>
+                <p>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    johnnywong2003@gmail.com</p>
                 <div class = "social-icons">
-                    <a href="#"><i class="images/facebook.png"></i></a>
-                    <a href="#"><i class="images/twitter.png"></i></a>
-                    <a href="#"><i class="images/instagram.png"></i></a>
-                    <a href="#"><i class="images/linkedin.png"></i></a>
+                    <a href="https://www.linkedin.com/in/johnny-wong-6b380924a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:johnnywong2003@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class = "btn btn2"> Download CV</a>
             </div>
-            <div id="contact-right">
+            <div class="contact-right">
                 <form>
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
@@ -167,9 +201,45 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
 
+<script>
+document.getElementById('see-more-btn').addEventListener('click', function(event) {
+    event.preventDefault()
+    var hiddenItems = document.querySelectorAll('.work.hidden, .work.show');
+    var isShowingMore = this.getAttribute('data-showing-more') === 'true';
 
+    // console.log('Is showing more:', isShowingMore);
 
+    hiddenItems.forEach(function(item) {
+        // console.log('Toggling item:', item);
+        if (isShowingMore) {
+            item.classList.remove('show');
+            item.classList.add('hidden');
+        } else {
+            item.classList.remove('hidden');
+            item.classList.add('show');
+        }
+    });
+
+    if (isShowingMore) {
+        this.textContent = 'See More';
+        this.setAttribute('data-showing-more', 'false');
+    } else {
+        this.textContent = 'See Less';
+        this.setAttribute('data-showing-more', 'true');
+    }
+});
+</script>
+
+<script>
+    var sidemenu = document.getElementById('sidemenu');
+    function openmenu() {
+        sidemenu.style.right = "0"
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px"
+    }
 </script>
 
 </body>
