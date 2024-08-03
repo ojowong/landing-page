@@ -1,0 +1,12 @@
+Tasks:
+
+1. Create a interactive object on the top of the page
+
+2. Fix the form sheet to prevent multiple entries in the excel spreadsheet
+    - maybe create a loading buffer
+    - prompt something that says that the message was something
+
+3. fix my projects and add actual projects
+
+4. Make the experience and stuff pop up when hovered over
+
